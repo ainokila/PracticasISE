@@ -1,4 +1,6 @@
 \input{preambuloSimple.tex}
+\usepackage{listings}
+\usepackage{python}
 
 %----------------------------------------------------------------------------------------
 %	TÍTULO Y DATOS DEL ALUMNO
@@ -112,6 +114,26 @@ Este tipo de Benchmark nos sirve para hacer comparaciones de distintas tarjetas 
 \section[Cuestión 2]{De los parámetros que le podemos pasar al comando ¿Qué significa -c 5 ? ¿y -n 100? Monitorice la ejecución de ab contra alguna	máquina (cualquiera) ¿cuántas “tareas” crea ab en el cliente?}
 
 El parámetro \textbf{-c 5} indica que vamos a enviar las peticiones en grupos de 5 y con el parámetro \textbf{-n 100} indicamos el numero de peticiones totales que vamos a enviar en este caso 100 peticiones.
+
+Voy a ejecutar \textit{ab -n 5000 -c 50 http://192.168.56.102/}, desde la máquina de Ubuntu hacia CentOS.
+
+\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
+	\centering
+	\includegraphics[scale=0.3]{pics/ab1}
+	\caption{Ejecución de ab} \label{fig:ab1}
+\end{figure}
+
+En otra terminal a la misma vez que se ejecuta ab, vamos ejecutar top para ver cuantos procesos crea.
+
+\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
+	\centering
+	\includegraphics[scale=0.3]{pics/ab0}
+	\caption{Top de ab} \label{fig:ab0}
+\end{figure}
+
+Como se puede apreciar ab crea un proceso en el cliente.
+
+
 
 
 
@@ -291,7 +313,7 @@ Generará 5000 peticiones a cada servidor y las mandará en paquetes de 50.
 	\end{tabular} 
 \end{center}
 
-Como podemos apreciar el servidor que mas rápido ha sido es Ubuntu, seguido de CentOS y finalmente Windows Server.
+Como podemos apreciar el servidor que mas rápido ha sido es Ubuntu, seguido de CentOS y finalmente Windows Server, con las misma configuración todas las maquinas.
 
 
 
@@ -306,6 +328,40 @@ Como podemos apreciar el servidor que mas rápido ha sido es Ubuntu, seguido de 
 %	Cuestión 5
 %----------------------------------------------------------------------------------------
 \section[Cuestión 5]{ Programe un benchmark usando el lenguaje que desee. El benchmark debe incluir, Objetivo del benchmark, Métricas (unidades, variables, puntuaciones, etc.), Instrucciones para su uso, Ejemplo de uso analizando los resultados.}
+
+Mi objetivo del benchmark es comparar que servidor puede multiplicar la posición de una matriz con otra de una manera mas rápida.
+
+He creado dos matrices de números aleatorios de 3000 filas y 3000 columnas, por tanto el numero de multiplicaciones que realizará será 9.000.000.
+Al ejecutar el benchmark obtenemos el tiempo en realizar las 9.000.000 multiplicaciones en segundos.\\
+
+Código:
+
+\lstinputlisting[language=Python]{benchmark.py}
+
+Ambas maquinas se encuentran en el mismo estado, recién arrancadas y simplemente se ha ejecutado la orden:\\
+
+\begin{center}
+	\textit{python3 benchmark.py}
+\end{center}
+
+Ejecución en máquina anfitriona:
+
+\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
+	\centering
+	\includegraphics[scale=0.4]{pics/anfitrion}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+	\caption{Benchmark en el anfitrión} \label{fig:anfi}
+\end{figure}
+
+
+Ejecución en máquina virtualizada:
+
+\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
+	\centering
+	\includegraphics[scale=0.4]{pics/virtual}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+	\caption{Benchmark en la máquina virtual} \label{fig:anfi}
+\end{figure}
+
+\textbf{Conclusión: }En mi caso tarda menos en ejecutar el benchmark la maquina virtual tras realizar varias comprobaciones.
 
 
 \bibliography{citas} %archivo citas.bib que contiene las entradas 
