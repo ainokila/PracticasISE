@@ -313,16 +313,139 @@ Generará 5000 peticiones a cada servidor y las mandará en paquetes de 50.
 	\end{tabular} 
 \end{center}
 
-Como podemos apreciar el servidor que mas rápido ha sido es Ubuntu, seguido de CentOS y finalmente Windows Server, con las misma configuración todas las maquinas.
-
-
-
-
+Como podemos apreciar el servidor que mas rápido ha sido es Ubuntu, por muy poca diferencia seguido de CentOS y finalmente Windows Server, con la misma configuración en todas las maquinas.
 
 %----------------------------------------------------------------------------------------
 %	Cuestión 4
 %----------------------------------------------------------------------------------------
 \section[Cuestión 4]{Instale y siga el tutorial en	 realizando capturas de pantalla y comentándolas. En vez de usar la web de jmeter, haga el experimento usando sus máquinas virtuales ¿coincide con los resultados de ab?}
+
+\textbf{Descarga: }
+
+\begin{enumerate}
+	\item Debemos ir a la pagina de descarga \cite{descarga} de jmeter \cite{jmeter} y lo descargamos.
+	
+	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
+		\centering
+		\includegraphics[scale=0.3]{pics/1}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+		\caption{Descarga jmeter} \label{fig:jmt1}
+	\end{figure}
+
+	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
+	\centering
+	\includegraphics[scale=0.3]{pics/2}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+	\caption{Descarga jmeter 2} \label{fig:jmt2}
+	\end{figure}
+
+	\item Descomprimimos el archivo y ejecutamos el programa a bin/ApacheJMeter 
+	
+	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
+		\centering
+		\includegraphics[scale=0.3]{pics/3}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+		\caption{Descomprimiendo jmeter 3} \label{fig:jmt3}
+	\end{figure}
+
+	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
+		\centering
+		\includegraphics[scale=0.3]{pics/4}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+		\caption{Ejecutando jmeter 4} \label{fig:jmt4}
+	\end{figure}
+\end{enumerate}
+
+\textbf{Creación benchmark: }
+
+\begin{enumerate}
+	\item Añadimos el nombre al benchmark.
+	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
+		\centering
+		\includegraphics[scale=0.3]{pics/5}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+		\caption{Ejecutando jmeter 5} \label{fig:jmt5}
+	\end{figure}
+
+	\item Seguidamente damos botón derecho en el panel derecho en el nombre de nuestro benchmark, después a Añadir, y Grupo de Hilos.\\
+	Aquí se configuran los "usuarios" que accederán a cada uno de los servidores, en mi caso 1000 usuarios en un tiempo de 10 segundos.
+	
+	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
+		\centering
+		\includegraphics[scale=0.3]{pics/6}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+		\caption{Ejecutando jmeter 6} \label{fig:jmt6}
+	\end{figure}
+
+\item Ahora tenemos que añadir las peticiones http.
+
+\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
+	\centering
+	\includegraphics[scale=0.3]{pics/7}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+	\caption{Ejecutando jmeter 7} \label{fig:jmt7}
+\end{figure}
+
+\item Ahora tenemos que configurar las peticiones http, debemos hacer este paso para cada uno de los servidores con su respectiva ip y su index.html.
+
+\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
+	\centering
+	\includegraphics[scale=0.3]{pics/8}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+	\caption{Ejecutando jmeter 8} \label{fig:jmt8}
+\end{figure}
+
+\item Ahora tenemos que añadir como obtendremos los resultados de cada una de las peticiones anteriores que hemos declarado.
+
+\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
+	\centering
+	\includegraphics[scale=0.3]{pics/9}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+	\caption{Ejecutando jmeter 9} \label{fig:jmt9}
+\end{figure}
+
+\item Nos debe quedar así.
+
+\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
+	\centering
+	\includegraphics[scale=0.3]{pics/10}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+	\caption{Ejecutando jmeter 10} \label{fig:jmt10}
+\end{figure}
+	
+\end{enumerate}
+
+\textbf{Ejecución: }
+
+\begin{enumerate}
+	\item Debemos guardar el proceso para continuar,damos a si.
+	
+	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
+		\centering
+		\includegraphics[scale=0.3]{pics/11}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+		\caption{Ejecutando jmeter 11} \label{fig:jmt11}
+	\end{figure}
+
+	\item Esperamos a que termine de ejecutarse.
+
+	\item Datos obtenidos de Ubuntu.
+
+	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
+		\centering
+		\includegraphics[scale=0.3]{pics/12}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+		\caption{Ejecutando jmeter 12} \label{fig:jmt12}
+	\end{figure}
+
+	\item Datos obtenidos de CentOS.
+
+	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
+		\centering
+		\includegraphics[scale=0.3]{pics/13}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+		\caption{Ejecutando jmeter 13} \label{fig:jmt13}
+	\end{figure}
+
+	\item Datos obtenidos de Windows Server.
+
+	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
+		\centering
+		\includegraphics[scale=0.3]{pics/14}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+		\caption{Ejecutando jmeter 14} \label{fig:jmt14}
+	\end{figure}
+\end{enumerate}
+
+\textbf{Conclusión: } Como podemos observar en las columnas kb/s, el que mas rendimiento ha obtenido es CentOS con 1006 kb/s, seguido de Ubuntu con 1005 kb/s y por último, con mucha diferencia Windows Server con 74 kb/s. Por tanto coinciden con los resultados obtenidos con ab, ya que entre Ubuntu y CentOS había muy poca diferencia.
+
+
 
 %----------------------------------------------------------------------------------------
 %	Cuestión 5
