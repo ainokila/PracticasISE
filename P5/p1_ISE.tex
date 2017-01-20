@@ -38,9 +38,9 @@
 %----------------------------------------------------------------------------------------
 \section[Cuestión 1]{Al modificar los valores del kernel de este modo, no logramos que persistan después de reiniciar la máquina. ¿Qué archivo hay que editar para que los cambios sean permanentes?}
 
-Para que los cambios que realicemos con sysctl sean persistentes necesitamos modificar el archivo \textbf{/etc/sysctl.conf}, donde se guarda la configuración del kernel y se cargará una vez arrancado nuestro sistema.
+Para que los cambios que realicemos con sysctl sean persistentes, necesitamos modificar el archivo \textbf{/etc/sysctl.conf} \cite{kernel}, donde se guarda la configuración del kernel y se cargará una vez que ha arrancado nuestro sistema.
 
-En mi caso modificare la variable para que cuando haya un kernel panic se reinicie a los 10 segundos.
+En mi caso modificaré la variable para que cuando haya un kernel panic se reinicie a los 10 segundos.
 
 \begin{itemize}
 	\item Observamos el estado actual de la variable con \textit{sysctl -a | grep panic}:
@@ -52,7 +52,7 @@ En mi caso modificare la variable para que cuando haya un kernel panic se reinic
 	\end{figure}
 	Como se puede apreciar esta configurado a 0.
 	
-	\item Ahora para cambiarlo a 10 debemos hacer \textit{sudo sysctl -w kernel.panic=10}.
+	\item Ahora para cambiarlo a 10, debemos hacer \textit{sudo sysctl -w kernel.panic=10}.
 	
 	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 		\centering
@@ -62,7 +62,7 @@ En mi caso modificare la variable para que cuando haya un kernel panic se reinic
 
 	\item Una vez modificado debemos hacerlo persistente añadiendo al archivo \textbf{/etc/sysctl.conf} con \textbf{echo "kernel.panic = 10" >> /etc/sysctl.conf}.
 
-\item Una vez realizado actualizamos la configuracion de sysctl con \textit{sysctl -p}.
+\item Una vez realizado actualizamos la configuración de sysctl con \textit{sysctl -p}.
 
 \begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 	\centering
@@ -70,7 +70,7 @@ En mi caso modificare la variable para que cuando haya un kernel panic se reinic
 	\caption{Cambiando kernel panic} \label{fig:kernel3}
 \end{figure}
 
-Como se puede apreciar se ha actualizado kernel.panic y ya es permanente.
+Como se puede apreciar, se ha actualizado kernel.panic y ya es permanente.
 \end{itemize}
 
 
@@ -82,7 +82,7 @@ Como se puede apreciar se ha actualizado kernel.panic y ya es permanente.
 %----------------------------------------------------------------------------------------
 \section[Cuestión 2]{¿Con qué opción se muestran todos los parámetros modificables en tiempo de ejecución? Elija dos parámetros y explique, en dos líneas, qué función tienen.}
 
-Para mostrar los parametros en tiempo de ejecución se usa \textbf{sysctl -a} \cite{kernel}
+Para mostrar los parámetros en tiempo de ejecución, se usa \textbf{sysctl -a} \cite{kernel} \cite{sysctl}
 
 \begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 	\centering
@@ -91,9 +91,9 @@ Para mostrar los parametros en tiempo de ejecución se usa \textbf{sysctl -a} \c
 \end{figure}
 
 \begin{itemize}
-	\item \textbf{kernel.panic\_on\_stackoverflow} : Si se produce un desbordamiento de pila y esta configurado a 0, intentara continuar con la operacion , en cambio si esta a 1 entrara en modo panico.
+	\item \textbf{kernel.panic\_on\_stackoverflow} : Si se produce un desbordamiento de pila y esta configurado a 0, intentará continuar con la operación, en cambio si esta a 1 entrará en modo pánico.
 	
-	\item \textbf{kernel.pid\_max} :Cuando el siguiente PID del kernel alcanza este valor, se ajusta a un valor mínimo de PID, ni el minimo ni el maximo se utilizan.
+	\item \textbf{kernel.pid\_max} :Cuando el siguiente PID del kernel alcanza este valor, se ajusta a un valor mínimo de PID, ni el mínimo ni el máximo se utilizan.
 \end{itemize}
 
 
@@ -102,7 +102,7 @@ Para mostrar los parametros en tiempo de ejecución se usa \textbf{sysctl -a} \c
 %----------------------------------------------------------------------------------------
 \section[Cuestión 3]{a) Realice una copia de seguridad del registro y restáurela, ilustre el proceso con capturas. b) Abra una ventana mostrando el editor del	registro.}
 
-Para realizar la copia debemos ir a regedit (editor de registros):
+Para realizar la copia debemos ir a regedit (editor de registros) \cite{regedit}:
 
 \begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 	\centering
@@ -110,7 +110,7 @@ Para realizar la copia debemos ir a regedit (editor de registros):
 	\caption{Copia seguridad regedit} \label{fig:reg}
 \end{figure}
 
-Una vez abierto damos a exportar:
+Una vez abierto damos a \textit{exportar}:
 
 \begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 	\centering
@@ -136,7 +136,7 @@ Ya tenemos nuestra copia de seguridad realizada.
 	\caption{Copia seguridad regedit 3} \label{fig:reg3}
 \end{figure}
 
-Para hacer el paso contrario, restarurar la copia de seguridad, vamos a importar:
+Para restaurar la copia de seguridad, vamos a \textit{importar}:
 
 \begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 	\centering
@@ -152,7 +152,7 @@ Seleccionamos la copia de seguridad a restaurar:
 	\caption{Copia seguridad regedit 5} \label{fig:reg5}
 \end{figure}
 
-Seleccionamos abrir y comenzará el proceso de restauracion.
+Seleccionamos \textit{abrir} y comenzará el proceso de restauración.
 
 \begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 	\centering
@@ -160,7 +160,7 @@ Seleccionamos abrir y comenzará el proceso de restauracion.
 	\caption{Copia seguridad regedit 6} \label{fig:reg6}
 \end{figure}
 
-Una vez finalice ya tenemos restaurada la copia de seguridad.
+Una vez finalice, ya tenemos restaurada la copia de seguridad.
 
 
 
@@ -169,13 +169,13 @@ Una vez finalice ya tenemos restaurada la copia de seguridad.
 %----------------------------------------------------------------------------------------
 \section[Cuestión 4]{ Enumere qué elementos se pueden configurar en Apache y en IIS para que Moodle funcione mejor.}
 
-En Apache algunos de los elementos que podemos configurar son:
+En Apache algunos de los elementos que podemos configurar para moodle \cite{moodle} son:
 
 \begin{itemize}
 	\item MaxClients para evitar que el sistema se quede sin memoria.
-	\item Reducir el numero de modulos que Apache carga desde httpd.conf para reducir el uso de memoria.
+	\item Reducir el numero de módulos que Apache carga desde httpd.conf para reducir el uso de memoria.
 	\item Disminuir MaxRequestsPerChild a 20-30.
-	\item Cnfigurar un Reverse Proxy server para reducir la carga del servidor para la descarga de archivos con imagenes.
+	\item Configurar un Reverse Proxy server para reducir la carga del servidor para la descarga de archivos con imágenes
 	\item Configurar el Directory Index DirectoryIndex correctamente para evitar la negociación de contenido.
 	\item Desactivar HostnameLookups para reducir la latencia del dns.
 	\item Reducir el TimeOut a 30-60.
@@ -197,7 +197,7 @@ En ISS algunos de los elementos que podemos configurar son:
 %----------------------------------------------------------------------------------------
 \section[Cuestión 5]{ Ajuste la compresión en el servidor y analice su comportamiento usando varios valores para el tamaño de archivo a partir del cual comprimir. Para comprobar que está comprimiendo puede usar el navegador o comandos como curl (see url) o lynx. Muestre capturas de pantalla de todo el proceso}
 
-Para poder comprobar la compresión del servidor voy a modificar la pagina por defecto del servidor como hicimos en la practica anterior casi 2KiB.
+Para poder comprobar la compresión del servidor voy a modificar la pagina por defecto del servidor como hicimos en la practica anterior, para que tenga un tamaño considerable para ser comprimida, casi 2KiB.
 
 \begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 	\centering
@@ -205,7 +205,7 @@ Para poder comprobar la compresión del servidor voy a modificar la pagina por d
 	\caption{Archivo por defecto} \label{fig:1}
 \end{figure}
 
-Una vez realizado vamos a la configuración de IIS y después al apartado Compresión y habilitamos las pestañas de compresión estática, y también configuramos sus parámetros.
+Una vez realizado vamos a la configuración de IIS y después al apartado \textit{Compresión} y habilitamos las pestañas de compresión estática, y también configuramos sus parámetros.
 
 \begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 	\centering
@@ -238,7 +238,7 @@ Como se puede apreciar la longitud de la respuesta ha pasado de 2264167 a 570363
 
 \begin{enumerate}[label=(\alph*)]
 	\item 
-Modificaré el servicio apache dos parametros:
+Modificaré en el servicio Apache dos parámetros:
 
 \begin{itemize}
 	\item MaxKeepAliveRequest: Número máximo de peticiones a permitir en una conexión persistente. Antes estaba: 100 , ahora: 64
@@ -262,7 +262,7 @@ Para modificar estos datos debemos ir a /etc/apache2/apache2.conf, hacemos una c
 	\caption{Optimizando Apache 1} \label{fig:6}
 \end{figure}
 
-\item Para obtener  monitorizar el rendimiento usaré Apache Benchmark como en la práctica anterior con ab -n 50000 -c 50 http://direccion/index.html, antes y después de la modificación.
+\item Para obtener monitorizar el rendimiento usaré Apache Benchmark como en la práctica anterior con ab -n 50000 -c 50 http://direccion/index.html, antes y después de la modificación.
 
 \begin{itemize}
 	\item \textbf{Configuración por defecto:}
@@ -293,4 +293,5 @@ Como podemos apreciar con la configuración personalizada hemos reducido el tiem
 \bibliographystyle{plain} % hay varias formas de citar
 
 \end{document}
+
 \grid

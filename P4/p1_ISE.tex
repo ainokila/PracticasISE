@@ -40,7 +40,7 @@
 %----------------------------------------------------------------------------------------
 \section[Cuestión 1]{Seleccione, instale y ejecute uno, comente los resultados.Atención: no es lo mismo un benchmark que una suite, instale un benchmark}
 
-He elegido un benchmark que se centra en la renderización de graficos en Linux, su nombre es Heaven \cite{heaven}.
+He elegido un benchmark que se centra en la renderización de gráficos en Linux, su nombre es Heaven \cite{heaven}.
 
 Ejecución Heaven Benchmark:
 
@@ -75,7 +75,7 @@ Ejecución Heaven Benchmark:
 		\caption{Ejecutando Heaven} \label{fig:HEAVEN3}
 	\end{figure}
 
-	\item Ahora se nos abrira la interfaz inicial de Heaven para configurar el benchmark, mi configuración será la siguiente:
+	\item Ahora se nos abrirá la interfaz inicial de Heaven para configurar el benchmark, mi configuración será la siguiente:
 	
 	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 		\centering
@@ -99,7 +99,7 @@ Ejecución Heaven Benchmark:
 		\caption{Resultados de Heaven} \label{fig:HEAVEN6}
 	\end{figure}
 
-	\item Los resultados de ejecutar Heaven en mi maquina portátil han sido que ha obtenido una generación media de fotogramas por segundo de 10.2, una puntuación de 256, también nos informa de cuales ha sido su pico máximo y minimo de fotogramas por segundo, en este caso 20.8 y 5.3.\\
+	\item Los resultados de ejecutar Heaven en mi máquina portátil han sido que ha obtenido una generación media de fotogramas por segundo de 10.2, una puntuación de 256, también nos informa de cuales ha sido su pico máximo y mínimo de fotogramas por segundo, en este caso 20.8 y 5.3.\\
 	Después simplemente nos informa de el tipo de plataforma donde se ha ejecutado y en que CPU-GPU y también la configuración del renderizado.
 	
 \end{enumerate}
@@ -142,7 +142,7 @@ Como se puede apreciar ab crea un proceso en el cliente.
 %----------------------------------------------------------------------------------------
 \section[Cuestión 3]{Ejecute ab contra a las tres máquinas virtuales (desde el SO	anfitrión a las máquina virtuales de la red local) una a una (arrancadas por	separado).¿Cuál es la que proporciona mejores resultados? Muestre y coméntelos. (Use como máquina de referencia Ubuntu Server para la comparativa).}
 
-En mi caso para poder ejecutar el benchmark de Apache en Windows 10 debo instalar XAMPP, es una distribución de Apache que tambien contiene algunas bases de datos para poder instalarlas.\\
+En mi caso para poder ejecutar el benchmark de Apache en Windows 10 debo instalar XAMPP, es una distribución de Apache que también contiene algunas bases de datos para poder instalarlas en Windows.\\
 
 Instalando XAMPP:
 
@@ -206,7 +206,7 @@ Instalando XAMPP:
 	
 \end{enumerate}
 
-Una vez tenemos apache instalado ya contamos con su herramienta ab (Apache Benchmark) para poder realizar las pruebas a las maquinas virtuales desde el anfitrión.
+Una vez tenemos apache instalado ya contamos con su herramienta ab (Apache Benchmark) para poder realizar las pruebas en las maquinas virtuales desde el anfitrión.
 
 Antes de empezar configuraré la pagina index.html para el benchmark en los tres servidores para que estén en igualdad de condiciones.\\
 El archivo index.html que utilizaré contiene html con un un titulo y h1,h2,h3,h4,h5 y h6 con texto generado en latin.\\
@@ -323,7 +323,7 @@ Como podemos apreciar el servidor que mas rápido ha sido es Ubuntu, por muy poc
 \textbf{Descarga: }
 
 \begin{enumerate}
-	\item Debemos ir a la pagina de descarga \cite{descarga} de jmeter \cite{jmeter} y lo descargamos.
+	\item Debemos ir a la página de descarga \cite{descarga} de jmeter \cite{jmeter} y lo descargamos.
 	
 	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 		\centering
@@ -333,7 +333,7 @@ Como podemos apreciar el servidor que mas rápido ha sido es Ubuntu, por muy poc
 
 	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 	\centering
-	\includegraphics[scale=0.3]{pics/2}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+	\includegraphics[scale=0.4]{pics/2}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
 	\caption{Descarga jmeter 2} \label{fig:jmt2}
 	\end{figure}
 
@@ -341,13 +341,13 @@ Como podemos apreciar el servidor que mas rápido ha sido es Ubuntu, por muy poc
 	
 	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 		\centering
-		\includegraphics[scale=0.3]{pics/3}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+		\includegraphics[scale=0.5]{pics/3}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
 		\caption{Descomprimiendo jmeter 3} \label{fig:jmt3}
 	\end{figure}
 
 	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 		\centering
-		\includegraphics[scale=0.3]{pics/4}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+		\includegraphics[scale=0.4]{pics/4}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
 		\caption{Ejecutando jmeter 4} \label{fig:jmt4}
 	\end{figure}
 \end{enumerate}
@@ -358,7 +358,7 @@ Como podemos apreciar el servidor que mas rápido ha sido es Ubuntu, por muy poc
 	\item Añadimos el nombre al benchmark.
 	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 		\centering
-		\includegraphics[scale=0.3]{pics/5}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+		\includegraphics[scale=0.5]{pics/5}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
 		\caption{Ejecutando jmeter 5} \label{fig:jmt5}
 	\end{figure}
 
@@ -367,7 +367,7 @@ Como podemos apreciar el servidor que mas rápido ha sido es Ubuntu, por muy poc
 	
 	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 		\centering
-		\includegraphics[scale=0.3]{pics/6}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+		\includegraphics[scale=0.5]{pics/6}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
 		\caption{Ejecutando jmeter 6} \label{fig:jmt6}
 	\end{figure}
 
@@ -375,7 +375,7 @@ Como podemos apreciar el servidor que mas rápido ha sido es Ubuntu, por muy poc
 
 \begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 	\centering
-	\includegraphics[scale=0.3]{pics/7}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+	\includegraphics[scale=0.5]{pics/7}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
 	\caption{Ejecutando jmeter 7} \label{fig:jmt7}
 \end{figure}
 
@@ -383,7 +383,7 @@ Como podemos apreciar el servidor que mas rápido ha sido es Ubuntu, por muy poc
 
 \begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 	\centering
-	\includegraphics[scale=0.3]{pics/8}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+	\includegraphics[scale=0.4]{pics/8}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
 	\caption{Ejecutando jmeter 8} \label{fig:jmt8}
 \end{figure}
 
@@ -391,7 +391,7 @@ Como podemos apreciar el servidor que mas rápido ha sido es Ubuntu, por muy poc
 
 \begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 	\centering
-	\includegraphics[scale=0.3]{pics/9}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+	\includegraphics[scale=0.5]{pics/9}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
 	\caption{Ejecutando jmeter 9} \label{fig:jmt9}
 \end{figure}
 
@@ -399,7 +399,7 @@ Como podemos apreciar el servidor que mas rápido ha sido es Ubuntu, por muy poc
 
 \begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 	\centering
-	\includegraphics[scale=0.3]{pics/10}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+	\includegraphics[scale=0.5]{pics/10}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
 	\caption{Ejecutando jmeter 10} \label{fig:jmt10}
 \end{figure}
 	
@@ -412,7 +412,7 @@ Como podemos apreciar el servidor que mas rápido ha sido es Ubuntu, por muy poc
 	
 	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 		\centering
-		\includegraphics[scale=0.3]{pics/11}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+		\includegraphics[scale=0.4]{pics/11}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
 		\caption{Ejecutando jmeter 11} \label{fig:jmt11}
 	\end{figure}
 
@@ -422,7 +422,7 @@ Como podemos apreciar el servidor que mas rápido ha sido es Ubuntu, por muy poc
 
 	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 		\centering
-		\includegraphics[scale=0.3]{pics/12}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+		\includegraphics[scale=0.5]{pics/12}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
 		\caption{Ejecutando jmeter 12} \label{fig:jmt12}
 	\end{figure}
 
@@ -430,7 +430,7 @@ Como podemos apreciar el servidor que mas rápido ha sido es Ubuntu, por muy poc
 
 	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 		\centering
-		\includegraphics[scale=0.3]{pics/13}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+		\includegraphics[scale=0.5]{pics/13}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
 		\caption{Ejecutando jmeter 13} \label{fig:jmt13}
 	\end{figure}
 
@@ -438,7 +438,7 @@ Como podemos apreciar el servidor que mas rápido ha sido es Ubuntu, por muy poc
 
 	\begin{figure}[H] %con el [H] le obligamos a situar aquí la figura
 		\centering
-		\includegraphics[scale=0.3]{pics/14}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
+		\includegraphics[scale=0.5]{pics/14}  %el parámetro scale permite agrandar o achicar la imagen. En el nombre de archivo puede especificar directorios
 		\caption{Ejecutando jmeter 14} \label{fig:jmt14}
 	\end{figure}
 \end{enumerate}
